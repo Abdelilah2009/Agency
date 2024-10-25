@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --principale-color: #E81F51;
+    --main-color: #191919;
+    --bg-black-color: #02050C;
+    --white-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    font-family: 'Inter',sans-serif;
+}
+
+header{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px 0px 50px;
+    align-items: center;
+}
+
+header nav img{
+    height: 35px;
+    padding-top: 10px;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li a{
+    padding-left: 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+header nav ul li a:hover{
+    color: var(--principale-color);
+    transition: .3s ease;
+}
+
+.home{
+    position: relative;
+    background: url(assets/img/background.jpg) no-repeat var(--bg-black-color);
+    background-size: cover;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.home .content-text{
+    padding: 30vh 0px 0px 20vh;
+    width: 60%;
+    color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-text h4{
+    font-size: 1rem;
+}
+
+.content-text h1{
+    font-size: 3.5rem;
+    padding: 15px 0px;
+}
+
+.content-text .h3{
+    display: flex;
+    gap: 10px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.btn button{
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 15px 35px;
+    border: transparent;
+    border-radius: 4px;
+    background-color: var(--principale-color);
+    color: var(--white-color);
+    box-shadow: 0 0px 5px 1px var(--principale-color);
+}
+
+.btn button:hover{
+    background-color: transparent;
+    box-shadow: 0 0px 5px 2px #e81f51e7;    
+    transition: 0.5s ease;
+}
+
+.btn button:active{
+    transform: scale(0.95);
+}
+
+
+
+/* About  */
+
+.about{
+    background-color: var(--main-color);
+    height: 70vh;
+    display: flex;
+    color: white;
+    padding: 10vh 0vh 0px 15vh;
+    font-family: 'Inter',sans-serif;
+}
+
+.about img{
+    height: 440px;
+}
+
+.about .about-text{
+    padding: 5vh 0px 0px 7vh;
+    max-width: 50%;
+    /* align-items: end; */
+}
+
+.about .about-text h1{
+    font-size: 2.2rem;
+    padding-bottom: 15px;
+}
+
+.about .about-text h3{
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+
+.about .about-text h3 span{
+    color: var(--principale-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
