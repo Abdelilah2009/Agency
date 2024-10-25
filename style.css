@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --principale-color: #E81F51;
     --main-color: #191919;
@@ -122,16 +126,17 @@ header nav ul li a:hover{
     height: 70vh;
     display: flex;
     color: white;
-    padding: 10vh 0vh 0px 15vh;
+    padding: 10vh 2vh 600px 15vh;
     font-family: 'Inter',sans-serif;
 }
 
 .about img{
-    height: 440px;
+    width: 40%;
+    height: 60vh;
 }
 
 .about .about-text{
-    padding: 5vh 0px 0px 7vh;
+    padding: 5vh 0vh 0vh 5vh;
     max-width: 50%;
     /* align-items: end; */
 }
@@ -142,14 +147,65 @@ header nav ul li a:hover{
 }
 
 .about .about-text h3{
-    font-size: 1.3rem;
-    padding-bottom: 10px;
+    font-size: 1.7rem;
+    padding-bottom: 20px;
 }
 
 .about .about-text h3 span{
     color: var(--principale-color);
 }
 
+.about .about-text p{
+    font-size: 1.41rem;
+    color: #5F6064;
+    padding-bottom: 40px;
+}
+
+/* Services */
+
+.services{
+    background-color: var(--bg-black-color);
+    width: 100%;
+    height: 70vh;
+}
+
+.services .services-title{
+    padding-top: 10vh;
+}
+
+.services .services-title h1,
+.services .services-title h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.services .services-title h1{
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.services .services-title h3{
+    font-size: 1.5rem;
+    font-family: 'Dosis',sans-serif;
+}
+
+.services .cards{
+    color: white;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.services .cards .card-item{
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.services .cards .card-item .icon i{
+    color: var(--principale-color);
+    font-size: 2rem;
+}
 
 
 
@@ -167,4 +223,77 @@ header nav ul li a:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .about{
+        background-color: var(--main-color);
+        height: 70vh;
+        display: flex;
+        color: white;
+        padding: 5vh 2vh 600px 15vh;
+        font-family: 'Inter',sans-serif;
+    }
+
+    .about img{
+        width: 40%;
+        height: 60vh;
+        padding-top: 2vh;
+    }
+    
+    .about .about-text{
+        padding: 2vh 0vh 0vh 5vh;
+        max-width: 50%;
+    }
+
+    .about .about-text h3{
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
+
+    .about .about-text p{
+        font-size: 1.3rem;
+        color: #5F6064;
+        padding-bottom: 40px;
+    }
+}
 
