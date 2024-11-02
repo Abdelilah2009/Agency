@@ -1,215 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-:root{
-    --principale-color: #E81F51;
-    --main-color: #191919;
-    --bg-black-color: #02050C;
-    --white-color: #ffffff;
 }
 
 a{
+    color: #000000;
     text-decoration: none;
-    color: var(--white-color);
 }
 
 ul{
     list-style: none;
 }
 
-h1{
-    font-family: 'Inter',sans-serif;
+img{
+    user-select: none;
 }
+
+:root{
+    --principale-color: #FCC400;
+    --bg-color: #FFFFFF;
+    --main-color: #E5E5E5;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Poppins',sans-serif;
+}
+
+/* #header */
 
 header{
-    font-family: 'Poppins', sans-serif;
-    position: fixed;
-    z-index: 100;
     width: 100%;
-    top: 0;
-    right: 0;
+    height: 100vh;
+    display: flex;
 }
 
-header nav{
+header #navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 25px 0px 50px;
+    padding: 0px 50px;
+    text-transform: capitalize;
     align-items: center;
+    user-select: none;
+    height: 12vh;
 }
 
-header nav img{
-    height: 35px;
-    padding-top: 10px;
+header .active{
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.192);
+    opacity: 0;
+    animation: to-bottom 1s ease forwards;
+    background-color: var(--bg-color);
+}
+
+header nav h2{
+    font-size: 1.8rem;
 }
 
 header nav ul{
     display: flex;
+    gap: 40px;
+    font-size: 1rem;
 }
 
-header nav ul li a{
-    padding-left: 50px;
-    font-size: 20px;
-    text-transform: capitalize;
+header nav ul li{
+    padding-top: 15px;
 }
 
 header nav ul li a:hover{
     color: var(--principale-color);
-    transition: .3s ease;
+    transition: all .3s ease;
 }
 
-.home{
-    position: relative;
-    background: url(assets/img/background.jpg) no-repeat var(--bg-black-color);
-    background-size: cover;
-    height: 90vh;
-    overflow: hidden;
+header nav ul li a:active{
+    color: #ff9100;
+    transition: all .3s ease;
 }
 
-.home .content-text{
-    padding: 30vh 0px 0px 20vh;
-    width: 60%;
-    color: var(--white-color);
-    font-family: 'Poppins', sans-serif;
+.btn{
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 15px 25px;
+    border-radius: 8px;
 }
 
-.content-text h4{
-    font-size: 1rem;
+.btn:hover{
+    background-color: var(--principale-color);
+    transition: .4s ease;
+    border: var(--principale-color);
 }
 
-.content-text h1{
-    font-size: 3.5rem;
-    padding: 15px 0px;
+.btn:active{
+    transform: scale(0.85);
 }
 
-.content-text .h3{
+/* #home */
+
+.home .container{
+    padding: 12rem 10rem 0px;
     display: flex;
-    gap: 10px;
-    font-weight: 700;
+    justify-content: space-around;
+    gap: 200px;
+}
+
+.home .container .content-text{
+    padding-top: 5rem;
+}
+
+.home .container .content-text h1{
+    font-size: 3rem;
+    font-weight: 500;
     padding-bottom: 30px;
 }
 
-.btn button{
-    font-size: 0.9rem;
-    text-align: center;
-    padding: 15px 35px;
-    border: transparent;
-    border-radius: 4px;
-    background-color: var(--principale-color);
-    color: var(--white-color);
-    box-shadow: 0 0px 5px 1px var(--principale-color);
-}
-
-.btn button:hover{
-    background-color: transparent;
-    box-shadow: 0 0px 5px 2px #e81f51e7;    
-    transition: 0.5s ease;
-}
-
-.btn button:active{
-    transform: scale(0.95);
-}
-
-
-
-/* About  */
-
-.about{
-    background-color: var(--main-color);
-    height: 70vh;
-    display: flex;
-    color: white;
-    padding: 10vh 2vh 600px 15vh;
-    font-family: 'Inter',sans-serif;
-}
-
-.about img{
-    width: 40%;
-    height: 60vh;
-}
-
-.about .about-text{
-    padding: 5vh 0vh 0vh 5vh;
-    max-width: 50%;
-    /* align-items: end; */
-}
-
-.about .about-text h1{
-    font-size: 2.2rem;
-    padding-bottom: 15px;
-}
-
-.about .about-text h3{
-    font-size: 1.7rem;
-    padding-bottom: 20px;
-}
-
-.about .about-text h3 span{
-    color: var(--principale-color);
-}
-
-.about .about-text p{
-    font-size: 1.41rem;
-    color: #5F6064;
+.home .container .content-text p{
+    font-size: 1rem;
     padding-bottom: 40px;
 }
 
-/* Services */
-
-.services{
-    background-color: var(--bg-black-color);
-    width: 100%;
-    height: 70vh;
+.btn-nav{
+    background-color: var(--principale-color);
+    border: 1px solid var(--principale-color);
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-transform: capitalize;
 }
 
-.services .services-title{
-    padding-top: 10vh;
+.btn-nav:hover{
+    background-color: transparent;
+    transition: .4s ease;
+    border: 1px solid #000000;
 }
 
-.services .services-title h1,
-.services .services-title h3{
-    color: white;
+
+.home .container .content-img img{
+    height: 420px;
+}
+
+
+/* #course */
+
+.course .cards{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0px 2rem 5rem 9rem;
+    gap: 80px;
 }
 
-.services .services-title h1{
-    font-size: 2.5rem;
-    padding-bottom: 10px;
+.course .cards .card img{
+    height: 40px;
 }
 
-.services .services-title h3{
-    font-size: 1.5rem;
-    font-family: 'Dosis',sans-serif;
+
+.course .cards .card span{
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.services .cards{
-    color: white;
-    display: flex;
-    gap: 10px;
-    justify-content: space-evenly;
-    padding-top: 50px;
-}
-
-.services .cards .card-item{
-    background-color: var(--main-color);
-    text-align: center;
-    border-radius: 10px;
-    padding: 35px 20px;
-    width: 20%;
-}
-
-.services .cards .card-item .icon i{
-    color: var(--principale-color);
-    font-size: 2rem;
+.course .cards .card h4{
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 15px;
 }
 
 
@@ -247,58 +204,26 @@ header nav ul li a:hover{
 
 
 
+/* keyframes */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1280px) {
-    .about{
-        background-color: var(--main-color);
-        height: 70vh;
-        display: flex;
-        color: white;
-        padding: 5vh 2vh 600px 15vh;
-        font-family: 'Inter',sans-serif;
+@keyframes to-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
     }
-
-    .about img{
-        width: 40%;
-        height: 60vh;
-        padding-top: 2vh;
-    }
-    
-    .about .about-text{
-        padding: 2vh 0vh 0vh 5vh;
-        max-width: 50%;
-    }
-
-    .about .about-text h3{
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    .about .about-text p{
-        font-size: 1.3rem;
-        color: #5F6064;
-        padding-bottom: 40px;
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+
+
+
+
+
+
+
+
+
 
