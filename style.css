@@ -11,13 +11,19 @@
     --main-color-2: #007EFF;
 }
 
+body{
+    background-color: #000000;
+    scroll-behavior: smooth;
+}
+
 header{
     position: relative;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
-    background: linear-gradient(90deg, rgba(2,9,16,1) 0%, rgba(7,60,63,1) 44%, rgba(7,60,63,1) 55%, rgba(2,9,16,1) 100%);
-    overflow: hidden;
+    background: radial-gradient(circle, rgba(1,4,12,1) 0%, rgba(9,83,86,1) 0%, rgba(6,45,50,1) 24%, rgba(6,44,49,1) 28%, rgba(6,43,48,1) 30%, rgba(4,31,36,1) 35%, rgba(1,4,12,1) 48%, rgba(1,4,12,1) 100%);
+    /* background-image:; */
 }
+
 
 header #navbar{
     display: flex;
@@ -95,9 +101,13 @@ header #navbar button:hover{
 
 
 header .home{
-    padding-top: 40vh;
+    padding-top: 45vh;
     text-align: center;
     font-family: 'Lato';
+    background-image:  url(assets/bg-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 header .home p{
@@ -108,7 +118,7 @@ header .home p{
 }
 
 header .home button{
-    padding: 13px 20px;
+    padding: 10px 20px;
     font-size: 1.1rem;
     background-color: #8CE5E3;
     border: 2px solid #8CE5E3;
@@ -123,9 +133,86 @@ header .home button:hover{
 
 header .home button i{
     color: #000000;
-    font-size: 1rem  ;
-    background: #000;
+    font-size: 1.2rem  ;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 50px;
+    margin-left: 7px;
+    transition: .8s;
 }
+
+header .home button i:hover{
+    background: #ffffffb6;
+}
+
+header .home button i:active{
+    background: transparent;
+}
+
+header .home .scroll-btn{
+    margin-top: 17vh;
+}
+
+header .home .scroll-btn a{
+    padding: 18px;
+    background: #051B1F;
+    border-radius: 50px;
+    border: 10px solid #052025;
+}
+
+header .home .scroll-btn a i{
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
+
+.services{
+
+    width: 100%;
+    height: 50vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
