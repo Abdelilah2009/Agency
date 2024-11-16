@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -21,7 +21,6 @@ header{
     height: 95vh;
     width: 100%;
     background: radial-gradient(circle, rgba(1,4,12,1) 0%, rgba(9,83,86,1) 0%, rgba(6,45,50,1) 24%, rgba(6,44,49,1) 28%, rgba(6,43,48,1) 30%, rgba(4,31,36,1) 35%, rgba(1,4,12,1) 48%, rgba(1,4,12,1) 100%);
-    /* background-image:; */
 }
 
 
@@ -65,7 +64,7 @@ header #navbar ul{
     display: flex;
     gap: 35px;
     font-family: 'Poppins';
-    padding-top: 11px;
+    padding-top: 8px;
 }
 
 header #navbar ul a{
@@ -80,8 +79,8 @@ header #navbar ul a:hover{
 
 header #navbar button{
     background-color: #5856E8;
-    padding: 13px 40px;
-    margin-left: 50px;
+    padding: 5px 20px;
+    margin: 5px 0px 0px 20px;
     border-radius: 50px;
     border: 2px solid #5856E8;
     color: #FFFFFF;
@@ -222,4 +221,4 @@ header .home .scroll-btn a i{
 
 
 
-
+ */
